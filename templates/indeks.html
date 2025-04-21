@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Laporan Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Laporan Data Penduduk</h1>
+
+    <h2>5 Data Pertama</h2>
+    {{ head | safe }}
+
+    <h2>Statistik Deskriptif</h2>
+    {{ stats | safe }}
+
+    <h2>Jumlah Orang per Kota</h2>
+    {{ kota_count | safe }}
+
+    <h2>Usia Rata-rata</h2>
+    <p class="highlight">{{ rata_rata }} tahun</p>
+</body>
+</html>
